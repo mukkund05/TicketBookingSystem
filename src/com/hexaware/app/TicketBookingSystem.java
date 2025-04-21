@@ -20,9 +20,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.Scanner;
 
-/**
- * Main class for the Ticket Booking System with a menu-driven interface.
- */
+
 public class TicketBookingSystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

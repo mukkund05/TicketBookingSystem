@@ -5,9 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
-/**
- * Abstract class representing an event in the ticket booking system.
- */
+
 public abstract class Event {
     protected int eventId;
     protected String eventName;
@@ -19,23 +17,10 @@ public abstract class Event {
     protected double ticketPrice;
     protected String eventType;
 
-    /**
-     * Default constructor.
-     */
+    
     public Event() {}
 
-    /**
-     * Constructor with all attributes.
-     * @param eventId Event ID
-     * @param eventName Event name
-     * @param eventDate Event date
-     * @param eventTime Event time
-     * @param venue Venue
-     * @param totalSeats Total seats
-     * @param availableSeats Available seats
-     * @param ticketPrice Ticket price
-     * @param eventType Event type
-     */
+  
     public Event(int eventId, String eventName, LocalDate eventDate, LocalTime eventTime, Venue venue,
                  int totalSeats, int availableSeats, double ticketPrice, String eventType) {
         this.eventId = eventId;
@@ -49,31 +34,20 @@ public abstract class Event {
         this.eventType = eventType;
     }
 
-    /**
-     * Displays event details.
-     */
+   
     public abstract void displayEventDetails();
 
-    /**
-     * Calculates total revenue based on tickets sold.
-     * @return Total revenue
-     */
+    
     public double calculateTotalRevenue() {
         return (totalSeats - availableSeats) * ticketPrice;
     }
 
-    /**
-     * Returns the number of booked tickets.
-     * @return Number of booked tickets
-     */
+    
     public int getBookedNoOfTickets() {
         return totalSeats - availableSeats;
     }
 
-    /**
-     * Books a specified number of tickets.
-     * @param numTickets Number of tickets to book
-     */
+  
     public void bookTickets(int numTickets) {
         if (numTickets <= availableSeats) {
             availableSeats -= numTickets;
@@ -82,10 +56,7 @@ public abstract class Event {
         }
     }
 
-    /**
-     * Cancels a booking and updates available seats.
-     * @param numTickets Number of tickets to cancel
-     */
+   
     public void cancelBooking(int numTickets) {
         availableSeats += numTickets;
     }

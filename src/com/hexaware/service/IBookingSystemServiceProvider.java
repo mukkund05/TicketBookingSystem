@@ -7,9 +7,7 @@ import com.hexaware.exception.EventNotFoundException;
 import com.hexaware.exception.InvalidBookingIDException;
 import java.util.List;
 
-/**
- * Interface for booking system service operations.
- */
+
 public interface IBookingSystemServiceProvider {
     Booking bookTickets(String eventName, int numTickets, List<Customer> customers, String category) 
         throws EventNotFoundException, DatabaseException;

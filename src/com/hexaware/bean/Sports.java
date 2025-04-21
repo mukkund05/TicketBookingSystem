@@ -4,26 +4,12 @@ package com.hexaware.bean;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-/**
- * Represents a sports event, extending Event.
- */
+
 public class Sports extends Event {
     private String sportName;
     private String teamsName;
 
-    /**
-     * Constructor for Sports.
-     * @param eventName Event name
-     * @param eventDate Event date
-     * @param eventTime Event time
-     * @param venue Venue
-     * @param totalSeats Total seats
-     * @param availableSeats Available seats
-     * @param ticketPrice Ticket price
-     * @param eventType Event type
-     * @param sportName Sport name
-     * @param teamsName Teams name
-     */
+ 
     public Sports(String eventName, LocalDate eventDate, LocalTime eventTime, Venue venue,
                   int totalSeats, int availableSeats, double ticketPrice, String eventType,
                   String sportName, String teamsName) {
@@ -32,9 +18,7 @@ public class Sports extends Event {
         this.teamsName = teamsName;
     }
 
-    /**
-     * Displays sports event details.
-     */
+  
     @Override
     public void displayEventDetails() {
         System.out.println("🏟️ Sports Event: " + eventName +

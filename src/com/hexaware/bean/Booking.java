@@ -5,25 +5,17 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Represents a booking in the ticket booking system.
- */
+
 public class Booking {
     private static int bookingIdCounter = 0;
     private int bookingId;
-    private Set<Customer> customers; // Using Set to prevent duplicates
+    private Set<Customer> customers; 
     private Event event;
     private int numTickets;
     private double totalCost;
     private LocalDateTime bookingDate;
 
-    /**
-     * Constructor for creating a booking without an ID (used before DB insertion).
-     * @param customers Set of customers
-     * @param event Event being booked
-     * @param numTickets Number of tickets
-     * @param totalCost Total cost of the booking
-     */
+ 
     public Booking(Set<Customer> customers, Event event, int numTickets, double totalCost) {
         if (numTickets != customers.size()) {
             throw new IllegalArgumentException("Number of tickets must equal number of customers");
@@ -37,15 +29,7 @@ public class Booking {
         event.bookTickets(numTickets);
     }
 
-    /**
-     * Constructor for creating a booking with an ID (used after DB retrieval).
-     * @param bookingId Booking ID
-     * @param customers Set of customers
-     * @param event Event being booked
-     * @param numTickets Number of tickets
-     * @param totalCost Total cost of the booking
-     * @param bookingDate Date of booking
-     */
+
     public Booking(int bookingId, Set<Customer> customers, Event event, int numTickets, double totalCost, LocalDateTime bookingDate) {
         if (numTickets != customers.size()) {
             throw new IllegalArgumentException("Number of tickets must equal number of customers");
@@ -58,9 +42,7 @@ public class Booking {
         this.bookingDate = bookingDate;
     }
 
-    /**
-     * Displays booking details.
-     */
+  
     public void displayBookingDetails() {
         System.out.println("\nBooking ID: " + bookingId);
         event.displayEventDetails();
@@ -72,7 +54,7 @@ public class Booking {
         System.out.println("Booking Date: " + bookingDate);
     }
 
-    // Getters
+   
     public int getBookingId() { return bookingId; }
     public Event getEventDetails() { return event; }
     public int getBookedNoOfTickets() { return numTickets; }

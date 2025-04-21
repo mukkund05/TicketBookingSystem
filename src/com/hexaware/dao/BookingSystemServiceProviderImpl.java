@@ -11,18 +11,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Implementation of IBookingSystemServiceProvider for business logic.
- */
+
 public class BookingSystemServiceProviderImpl extends EventServiceProviderImpl implements IBookingSystemServiceProvider {
     private IBookingSystemRepository repository = new BookingSystemRepositoryImpl();
     private Set<Event> events = new HashSet<>();
 
-    /**
-     * Adds an event to the system and database.
-     * @param event Event to add
-     * @throws DatabaseException If a database error occurs
-     */
+ 
     public void addEvent(Event event) throws DatabaseException {
         try {
             String actor = "";

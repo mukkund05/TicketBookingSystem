@@ -3,9 +3,7 @@ package com.hexaware.bean;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-/**
- * Represents a movie event, extending Event.
- */
+
 public class Movie extends Event {
     private String genre;
     private String actorName;

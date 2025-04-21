@@ -6,9 +6,7 @@ import com.hexaware.bean.Venue;
 import com.hexaware.exception.DatabaseException;
 import java.util.Set;
 
-/**
- * Interface for event service operations.
- */
+
 public interface IEventServiceProvider {
     Event createEvent(String eventName, String date, String time, int totalSeats, 
                      double ticketPrice, String eventType, Venue venue) throws DatabaseException;

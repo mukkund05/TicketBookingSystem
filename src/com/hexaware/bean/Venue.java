@@ -2,44 +2,29 @@ package com.hexaware.bean;
 
 import java.util.Objects;
 
-/**
- * Represents a venue in the ticket booking system.
- */
+
 public class Venue {
     private int venueId;
     private String venueName;
     private String address;
 
-    /**
-     * Default constructor.
-     */
+  
     public Venue() {}
 
-    /**
-     * Constructor with ID.
-     * @param venueId Venue ID
-     * @param venueName Venue name
-     * @param address Venue address
-     */
+ 
     public Venue(int venueId, String venueName, String address) {
         this.venueId = venueId;
         this.venueName = venueName;
         this.address = address;
     }
 
-    /**
-     * Constructor without ID.
-     * @param venueName Venue name
-     * @param address Venue address
-     */
+   
     public Venue(String venueName, String address) {
         this.venueName = venueName;
         this.address = address;
     }
 
-    /**
-     * Displays venue details.
-     */
+    
     public void displayVenueDetails() {
         System.out.println("Venue: " + venueName + " | Address: " + address);
     }
